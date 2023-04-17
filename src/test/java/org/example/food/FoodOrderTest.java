@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 
-public class FoodOrderTest {
+class FoodOrderTest {
 
     @DisplayName("주문을 생성할 수 있다.")
     @Test
