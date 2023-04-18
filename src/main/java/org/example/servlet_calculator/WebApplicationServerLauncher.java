@@ -1,18 +1,17 @@
-package org.example;
+package org.example.servlet_calculator;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
-import org.example.web_calculator.CustomWebApplicationServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.ServletConfig;
 import java.io.File;
 import java.io.IOException;
 
-// GET /calculate?operand1=11&operator=*&operand2=55
-public class WebApplicationServer {
+public class WebApplicationServerLauncher {
 
-    private static final Logger log = LoggerFactory.getLogger(WebApplicationServer.class);
+    private static final Logger log = LoggerFactory.getLogger(WebApplicationServerLauncher.class);
 
     public static void main(String[] args) throws LifecycleException, IOException {
         String webappDirLocation = "webapps/";
@@ -24,7 +23,5 @@ public class WebApplicationServer {
 
         tomcat.start();
         tomcat.getServer().await();
-
-//        new CustomWebApplicationServer(8080).start();
     }
 }
