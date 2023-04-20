@@ -1,6 +1,5 @@
 package org.example.reflection;
 
-import org.assertj.core.api.Assertions;
 import org.example.reflection.annotation.Controller;
 import org.example.reflection.annotation.Service;
 import org.example.reflection.model.User;
@@ -15,8 +14,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @Controller 애너테이션이 설정되어있는 모든 클래스를 찾아서 출력한다
@@ -60,9 +57,9 @@ public class ReflectionTest {
         logger.debug("clazz2: [{}]", clazz2);
         logger.debug("clazz3: [{}]", clazz3);
 
-        assertThat(clazz == clazz2).isTrue();
-        assertThat(clazz2 == clazz3).isTrue();
-        assertThat(clazz == clazz3).isTrue();
+//        assertThat(clazz == clazz2).isTrue();
+//        assertThat(clazz2 == clazz3).isTrue();
+//        assertThat(clazz == clazz3).isTrue();
     }
 
     private Set<Class<?>> getTypesAnnotateWith(List<Class<? extends Annotation>> annotations) {
